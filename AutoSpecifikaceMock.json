@@ -1,0 +1,33 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "AutoSpecifikaceMock",
+    "version" : "1.0.0",
+    "description" : "AutoSpecifikaceMock"
+  },
+  "paths" : {
+    "/specifikace" : {
+      "get" : {
+        "operationId" : "getSpecifikace",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve specifikace",
+        "parameters" : [ {
+          "name" : "kod",
+          "in" : "query",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/autospecifikacemock/v1",
+  "schemes" : [ "http" ],
+  "host" : "localhost:7801"
+}

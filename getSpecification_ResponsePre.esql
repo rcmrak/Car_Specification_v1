@@ -1,0 +1,16 @@
+
+
+
+
+CREATE COMPUTE MODULE getSpecification_ResponsePre
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		SET OutputRoot.XMLNSC.car.vin = InputRoot.XMLNSC.Auto.kod;
+		SET OutputRoot.XMLNSC.car.engine = InputRoot.XMLNSC.Auto.motor;
+		SET OutputRoot.XMLNSC.car.fuel = InputRoot.XMLNSC.Auto.palivo;
+		SET OutputRoot.XMLNSC.car.transmission = InputRoot.XMLNSC.Auto.prevodovka;
+
+		RETURN TRUE;
+	END;
+END MODULE;

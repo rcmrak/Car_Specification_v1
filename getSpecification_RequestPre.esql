@@ -1,0 +1,11 @@
+
+
+CREATE COMPUTE MODULE getSpecification_RequestPre
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputLocalEnvironment.Destination.REST.Request.Parameters.kod = InputLocalEnvironment.REST.Input.Parameters.vin;
+		
+		RETURN TRUE;
+	END;
+END MODULE;
